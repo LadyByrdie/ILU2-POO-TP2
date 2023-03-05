@@ -26,7 +26,7 @@ public class BoundaryPrendreEtal {
 				System.out.println("Quel produit souhaitez-vous vendre?");
 				String produit= scan.toString();
 				System.out.println("Combien souhaitez-vous en vendre?");
-				int nbProduit= scan.nextInt();
+				int nbProduit= Clavier.entrerEntier(scan.toString());
 				int numeroEtal= this.controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit);
 				if(numeroEtal!=-1) {
 					System.out.println("Le vendeur" +nomVendeur+ "s'est installé à l'étal n "+ numeroEtal);
