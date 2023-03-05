@@ -18,6 +18,10 @@ public class Village {
 		marche = new Marche(nbEtal);
 	}
 
+	public Chef getChef() {
+		return chef;
+	}
+
 	public String getNom() {
 		return nom;
 	}
