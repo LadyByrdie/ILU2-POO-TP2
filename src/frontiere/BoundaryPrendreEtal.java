@@ -14,28 +14,37 @@ public class BoundaryPrendreEtal {
 
 	public void prendreEtal(String nomVendeur) {
 		if(!controlPrendreEtal.verifierIdentite(nomVendeur)) {
-			System.out.println("Je suis dÃ©solÃ©e " +nomVendeur+ "mais il faut Ãªtre un habitant de notre village pour commencer ici.");
+			System.out.println("Je suis désolée " +nomVendeur+ "mais il faut être un habitant de notre village pour commencer ici.");
 		}else {
 			System.out.println("Bonjour " +nomVendeur+ " , je vais regarder si je peux vous trouver un Ã©tal");
 			if(!controlPrendreEtal.resteEtals()) {
-				System.out.println("DÃ©solÃ©e "+ nomVendeur+"je n'ai plus d'Ã©tal qui ne soit as dÃ©jÃ  occupÃ©.");
+				System.out.println("Désolée "+ nomVendeur+"je n'ai plus d'étal qui ne soit as déjà  occupé.");
 			}else {
 				this.installerVendeur(nomVendeur);
-				System.out.println("c'est parfait, il me reste un Ã©tal pour vous!");
-				System.out.println("il me faudrait quelques renseignements: ");
-				System.out.println("Quel produit souhaitez-vous vendre?");
-				String produit= scan.toString();
-				System.out.println("Combien souhaitez-vous en vendre?");
-				int nbProduit= Clavier.entrerEntier(scan.toString());
-				int numeroEtal= this.controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit);
-				if(numeroEtal!=-1) {
-					System.out.println("Le vendeur" +nomVendeur+ "s'est installÃ© Ã  l'Ã©tal n "+ numeroEtal);
+				
 				}
 			}
 		}
-	}
+
 
 	private void installerVendeur(String nomVendeur) {
-		//TODO a completer
+		StringBuilder question = new StringBuilder();
+		
+		System.out.println("C'est parfait, il me reste un étal pour vous!");
+		System.out.println("Il me faudrait quelques renseignements: ");
+		
+		System.out.println("Quel produit souhaitez-vous vendre?");
+		String produit= scan.next();
+		
+		question.append("Combien souhaitez-vous en vendre?");
+		int nbProduit= Clavier.entrerEntier(question.toString());
+		
+		int numeroEtal= this.controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit)+1;
+		
+		if(numeroEtal!=-1) {
+			System.out.println("Le vendeur" +nomVendeur+ "s'est installé à l'étal n° "+ numeroEtal);
+		
 	}
+}
+
 }
