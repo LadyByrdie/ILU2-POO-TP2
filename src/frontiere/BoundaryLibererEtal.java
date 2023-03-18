@@ -11,7 +11,7 @@ public class BoundaryLibererEtal {
 
 	public void libererEtal(String nomVendeur) {
 		if(!controlLibererEtal.isVendeur(nomVendeur)) {
-			System.out.println("Mais vous n'^etes pas inscrit sur notre marché aujourd'hui!");
+			System.out.println("Mais vous n'Ãªtes pas inscrit sur notre marchï¿½ aujourd'hui!");
 		}else{
 			String[] donneesEtal;
 			donneesEtal=controlLibererEtal.libererEtal(nomVendeur);
@@ -23,7 +23,7 @@ public class BoundaryLibererEtal {
 				System.out.println("Vous avez vendu " + quantiteVendu + " sur"+ quantiteInitial+""+produit+".");
 				
 			}
-			System.out.println("Au revoir "+nomVendeur+",passez une bonne journée");
+			System.out.println("Au revoir "+nomVendeur+",passez une bonne journï¿½e");
 			
 		}
 	}

@@ -14,9 +14,9 @@ public class BoundaryAfficherMarche {
 		infosMarche=controlAfficherMarche.donnerInfosMarche();
 		
 		if(infosMarche.length==0) {
-			System.out.println("Le march� est vide, revenes plus tard.");
+			System.out.println("Le marché est vide, revenes plus tard.");
 		}else {
-			System.out.println(nomAcheteur+ " ,vous trouverez au march�.");
+			System.out.println(nomAcheteur+ " ,vous trouverez au marché.");
 			for(int i=0;i<infosMarche.length;i++){
 				if((i%3==0)&&(i>2||i==0)) {
 					String vendeur=infosMarche[i];

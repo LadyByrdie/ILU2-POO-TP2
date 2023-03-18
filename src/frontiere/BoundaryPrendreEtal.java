@@ -14,11 +14,11 @@ public class BoundaryPrendreEtal {
 
 	public void prendreEtal(String nomVendeur) {
 		if(!controlPrendreEtal.verifierIdentite(nomVendeur)) {
-			System.out.println("Je suis désolée " +nomVendeur+ "mais il faut être un habitant de notre village pour commencer ici.");
+			System.out.println("Je suis dï¿½solï¿½e " +nomVendeur+ "mais il faut ï¿½tre un habitant de notre village pour commencer ici.");
 		}else {
 			System.out.println("Bonjour " +nomVendeur+ " , je vais regarder si je peux vous trouver un Ã©tal");
 			if(!controlPrendreEtal.resteEtals()) {
-				System.out.println("Désolée "+ nomVendeur+"je n'ai plus d'étal qui ne soit as déjà  occupé.");
+				System.out.println("DÃ©solÃ©e "+ nomVendeur+"je n'ai plus d'Ã©tal qui ne soit as dÃ©jÃ  occupÃ©.");
 			}else {
 				this.installerVendeur(nomVendeur);
 				
@@ -30,7 +30,7 @@ public class BoundaryPrendreEtal {
 	private void installerVendeur(String nomVendeur) {
 		StringBuilder question = new StringBuilder();
 		
-		System.out.println("C'est parfait, il me reste un étal pour vous!");
+		System.out.println("C'est parfait, il me reste un ï¿½tal pour vous!");
 		System.out.println("Il me faudrait quelques renseignements: ");
 		
 		System.out.println("Quel produit souhaitez-vous vendre?");
@@ -42,7 +42,7 @@ public class BoundaryPrendreEtal {
 		int numeroEtal= this.controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit)+1;
 		
 		if(numeroEtal!=-1) {
-			System.out.println("Le vendeur" +nomVendeur+ "s'est installé à l'étal n° "+ numeroEtal);
+			System.out.println("Le vendeur" +nomVendeur+ "s'est installï¿½ ï¿½ l'ï¿½tal nï¿½ "+ numeroEtal);
 		
 	}
 }
