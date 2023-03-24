@@ -26,28 +26,30 @@ public class BoundaryAcheterProduit {
 			
 			Gaulois[] commercant= controlAcheterProduit.chercherProduit(produit);
 			
-			if(commercant[0]==null) {
+			if(commercant==null&& commercant.length==0) {
 				System.out.println("Aucun des nos marchands à le produit que vous cherchez");
 			}else {
-			question.append("Chez quel commerçant voules-vous acheter des fleurs?\n");
+			question.append("Chez quel commerçant voules-vous acheter des" +produit+ "?\n");
 			
-			for (int i=1; (i<=commercant.length)&&(commercant[i]!=null);i++)
+			for (int i=1; (i<commercant.length)&&(commercant[i]!=null);i++)
 				{
-					question.append(i + "-" + commercant[i]+"\n");
+					question.append(i + "-" + commercant[i].getNom() +"\n");
 				}
 			
 			int choixUtilisateur= Clavier.entrerEntier(question.toString());
 			
-			if (choixUtilisateur>=commercant.length)
+			if (choixUtilisateur>commercant.length)
 			{
 				System.out.println("inserez un numero entre 1 et " +commercant.length+ " s'il vous plait");
 			}
-			
-			System.out.println( nom + " Se déplace jusqu'à l'étal du vendeur " + commercant[choixUtilisateur-1]);
+			else
+			{
+			System.out.println( nom + " Se déplace jusqu'à l'étal du vendeur " + commercant[choixUtilisateur-1].getNom());
 			controlAcheterProduit.acheterProduit(nom,commercant[choixUtilisateur-1]);
 		
 			}
 			
 		}
 	}
+}
 }
