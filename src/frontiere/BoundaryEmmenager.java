@@ -61,6 +61,6 @@ public class BoundaryEmmenager {
 				System.out.println("Attention Druide, vous voys �tes tromp� entre le minimum et le maximum");
 			}
 		}while(effetPotionMin>effetPotionMax);
-		controlEmmenager.ajouterDuide(nomVisiteur, forceDruide, effetPotionMin, effetPotionMax);
+		controlEmmenager.ajouterDruide(nomVisiteur, forceDruide, effetPotionMin, effetPotionMax);
 	}
 }
